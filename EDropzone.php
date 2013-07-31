@@ -75,7 +75,8 @@ class EDropzone extends CWidget {
                 'parallelUploads' => 1,
                 'paramName' => $this->name,
                 'accept' => "js:function(file, done){if(jQuery.inArray(file.type,{$this->mimeTypes})){done('File type not allowed.');}else{done();}}",
-                'init' => "js:function(){this.on('success',function(file){{$this->onSuccess}});}"
+                //'init' => "js:function(){this.on('success',function(file){{$this->onSuccess}});}",
+                'init' => "js:function(){this.done(function(data, status, jqXHDR){{$this->onSuccess}});}",
                 ), $this->options);
 
         $options = CJavaScript::encode($options);
@@ -83,7 +84,7 @@ class EDropzone extends CWidget {
         $script = "Dropzone.options.fileup = {$options}";
 
         $this->registerAssets();
-        Yii::app()->getClientScript()->registerScript(__CLASS__ . '#' . $this->getId(), $script, CClientScript::POS_END);
+        Yii::app()->getClientScript()->registerScript(__CLASS__ . '#' . $this->getId(), $script, CClientScript::POS_READY);
     }
 
     private function registerAssets() {
