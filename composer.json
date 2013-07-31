@@ -1,0 +1,22 @@
+{
+    "name": "garyburge/yii-dropzone",
+    "description": "A fork of subdee/yii-dropzone to add component.json",
+    "keywords": [
+        "yii",
+        "module",
+        "cms"
+    ],
+    "homepage": "https://github.com/garyburge/yii-dropzone",
+    "type": "yii-extension",
+    "license": "GNU General Public License v3",
+    "version": "dev-master",
+    "authors": [
+        {
+            "name": "Gary Burge",
+            "email": "garyburge@garyburge.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.1.0"
+    }
+}

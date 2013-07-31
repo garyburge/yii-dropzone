@@ -1,0 +1,15 @@
+{
+    "name": "yii-dropzone",
+    "description": "A fork of subdee/yii-dropzone to add component.json",
+    "author": "subdee <subdee.studio@gmail.com>",
+    "contributors": [
+        {
+            "name": "subdee",
+            "email": "subdee.studio@gmail.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/garyburge/yii-dropzone.git"
+    },
+}
